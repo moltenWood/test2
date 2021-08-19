@@ -16,7 +16,7 @@ BUYAmount decimal(25,8) NOT NULL DEFAULT 0,
 CreateTime TIMESTAMP NOT NULL DEFAULT current_timestamp ,
 UpdateTime TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP)`)
 
-//创建表
+//创建表112312
 func CreateFakeTrades(dbName string, tableName string) {
 	db := DbPool[dbName]
 
