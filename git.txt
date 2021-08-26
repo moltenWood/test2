@@ -1,0 +1,57 @@
+git clone 指定分支
+git clone -b 分支名字 ssh地址 
+之后要输入ssh密码 123456
+
+查看当前在哪个分支
+git branch
+
+重命名本地分支
+git branch -m 已存在的分支名字 新名字
+
+新建本地新分支
+git branch 分支名字
+
+新建本地新分支 并切换过去
+git checkout -b master
+
+连接远程仓库
+git remote add origin https://git.zx-tech.net/ljhua/navigate_sys.git
+git remote add origin git@github.com:moltenWood/test2.git
+git remote add origin git@github.com:moltenWood/work_navigateSys.git
+git pull origin master --allow-unrelated-histories
+
+git push  <REMOTENAME> <BRANCHNAME> 
+git push origin master:dev_wdz_v1.8
+
+git config core.autocrlf false
+（1）设置为true【config --global core.autocrlf true】
+
+          当设置成true时，这意味着你在任何时候添加(add)文件到git仓库时，git都会视为它是一个文本文件(text file)。
+
+　　　它将把crlf变成LF。
+
+（2）设置为false【config --global core.autocrlf false】
+
+   　　当设置成false时，line endings将不做转换操作。文本文件保持原来的样子。
+
+（3）设置为input时，添加文件git仓库时，git把crlf编程lf。当有人Check代码时还是lf方式。因此在window操作系统下，不要使用这个设置。
+
+
+3、删除远程分支: git push origin --delete [branchname]
+
+提示删除了一个名为 201804019-test-files 的分支,
+注意: 在删除远程分支时，同名的本地分支并不会被删除，所以还需要单独删除本地同名分支
+如果发生以下错误:
+error: unable to delete ‘origin/xxxxxxxx-fixbug’: remote ref does not exist
+error: failed to push some refs to ‘git@github.com:xxxxxxxx/xxxxxxxxxx.git’
+解决办法： git checkout xxxxx-fixbug 切换到当前分支上， 然后再 进行 git push --delete origin origin/xxxxx-fixbug
+此时将不会再发生错误 。
+
+127.0.0.1:8080/permission_setting/get_app_by_type_and_id?neededAppCollumName=ID&neededAppCollumName=Name&departmentId=-2&roleId=5&staffId=2&type=role&id=1
+127.0.0.1:8080/system_navigate/get_app_by_department_role_staff
+
+
+
+master -》 正式版
+测试版 -》http://office.zx-tech.net:8024/perm/ping develop
+
